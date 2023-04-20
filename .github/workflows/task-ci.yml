@@ -15,7 +15,6 @@ jobs:
       - name: Create branch
         run: |
           git checkout main
-          git pull
           git checkout -b feature/issue-${{ github.event.issue.number }}
           git push -u origin feature/issue-${{ github.event.issue.number }}
 
@@ -42,7 +41,8 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: main
+          base: main
+          branch: feature/issue-${{ github.event.issue.number }}
           title: '[Example] Update report'
           body-path: ./.github/PULL_REQUEST_TEMPLATE/task.md
           draft: true
