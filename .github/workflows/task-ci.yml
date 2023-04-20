@@ -14,7 +14,7 @@ jobs:
 
       - name: Create branch
         run: |
-          git checkout dev
+          git checkout main
           git pull
           git checkout -b feature/issue-${{ github.event.issue.number }}
           git push -u origin feature/issue-${{ github.event.issue.number }}
