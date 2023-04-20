@@ -18,9 +18,26 @@ jobs:
           git pull
           git checkout -b feature/issue-${{ github.event.issue.number }}
           git push -u origin feature/issue-${{ github.event.issue.number }}
-          git commit --allow-empty -m "Create branch for task #${{ github.event.issue.number }}"
-          git push
 
+      - name: Push Empty Commit
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        with:
+          # The arguments for the `git add` command (see the paragraph below for more info)
+          # Default: '.'
+          add: ''
+
+          # Additional arguments for the git commit command. The --message argument is already set by the message input.
+          # Default: ''
+          commit: --allow-empty
+
+          # Arguments for the git fetch command. If set to false, the action won't fetch the repo.
+          # For more info as to why fetching is usually recommended, please see the "Performance on large repos" FAQ. 
+          # Default: --tags --force
+          fetch: false
+
+          # The message for the commit.
+          # Default: 'Commit from GitHub Actions (name of the workflow)'
+          message: "Create branch for task #${{ github.event.issue.number }}"
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v5
