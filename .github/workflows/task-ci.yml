@@ -18,6 +18,8 @@ jobs:
           git pull
           git checkout -b feature/issue-${{ github.event.issue.number }}
           git push -u origin feature/issue-${{ github.event.issue.number }}
+          git commit --allow-empty -m "Create branch for task #${{ github.event.issue.number }}"
+          git push
 
       - name: Create Pull Request
         id: cpr
