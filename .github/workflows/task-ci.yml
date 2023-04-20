@@ -1,0 +1,38 @@
+name: Create Branch and Draft for New Issue
+on:
+  issues:
+    types: [opened]
+    labels:
+      - 'task'
+
+jobs:
+  create-branch-and-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create branch
+        run: |
+          git checkout dev
+          git pull
+          git checkout -b feature/issue-${{ github.event.issue.number }}
+          git push -u origin feature/issue-${{ github.event.issue.number }}
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          base: feature/issue-${{ github.event.issue.number }}
+          title: '[Example] Update report'
+          body-path: "{GITHUB_WORKSPACE}/.github/PULL_REQUEST_TEMPLATE/task.yml"
+          draft: true
+
+      - name: Create or Update Project Card
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        uses: peter-evans/create-or-update-project-card@v2
+        with:
+          project-name: Documentation
+          column-name: Draft
+          issue-number: ${{ steps.cpr.outputs.pull-request-number }}
+
