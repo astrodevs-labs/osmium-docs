@@ -23,9 +23,9 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          base: feature/issue-${{ github.event.issue.number }}
+          branch: main
           title: '[Example] Update report'
-          body-path: "{GITHUB_WORKSPACE}/.github/PULL_REQUEST_TEMPLATE/task.yml"
+          body-path: ./.github/PULL_REQUEST_TEMPLATE/task.md
           draft: true
 
       - name: Create or Update Project Card
