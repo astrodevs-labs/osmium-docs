@@ -1,0 +1,42 @@
+name: Epic Meta Issue
+description: Describes an epic feature that will be linked to a corresponding milestone.
+title: "Epic: <feature>"
+labels: [epic, meta]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe briefly the feature.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Describe the goal of the feature and why it should be done.
+    validations:
+      required: true
+  - type: textarea
+    id: how-to
+    attributes:
+      label: How To
+      description: Describe a list (or sub lists) of things te be done in order to implement the whole feature.
+      placeholder: Each checkboxes will correspond to 'Task Issues'.
+      value: |
+        ## **Category 1**
+        - [ ] 1.
+        - [ ] 2.
+        - [ ] 3.
+        ## **Category 2**
+        - [ ] 1.
+        - [ ] 2.
+        - [ ] 3.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

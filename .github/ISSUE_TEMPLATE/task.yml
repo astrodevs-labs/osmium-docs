@@ -1,0 +1,25 @@
+name: Task Issue
+description: Describes a small task that will be linked to a corresponding milestone/epic issue.
+title: "Task(Linked Epic Issue): <task/feature>"
+labels: [task]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the task, what should be done ?.
+    validations:
+      required: true
+  - type: textarea
+    id: qa
+    attributes:
+      label: QA
+      description: Describe if the task can than be tested and how it will be tested.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
