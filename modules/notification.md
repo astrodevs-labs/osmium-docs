@@ -3,6 +3,7 @@
 ## **Description**
 
 This module is responsible for showing notifications of any kind from other modules.
+A user can click on a notification to be redirected to another module (kinda like href)
 
 ## **Features**
 
