@@ -7,7 +7,6 @@ This module is responsible for showing notifications of any kind from other modu
 ## **Features**
 
 - Store the old notifications for a history
-- Listen for a payload to collect notifications requests
 
 ## **UI**
 
@@ -21,6 +20,16 @@ None
 
 - Notification color configuration
 - Notification modal size configuration
+
+## **Interactions**
+
+- Listen for a payload to collect notifications requests
+
+### Incomming
+Should listen for notification requests from other modules
+
+### Outgoing
+Should notify UI module to notify frontend that a new notification has popped up
 
 ## **Events**
 
