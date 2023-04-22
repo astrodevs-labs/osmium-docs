@@ -23,8 +23,6 @@ None
 
 ## **Interactions**
 
-- Listen for a payload to collect notifications requests
-
 ### Incomming
 Should listen for notification requests from other modules
 
