@@ -7,11 +7,11 @@ This module is responsible for showing the current hierarchy of files and direct
 ## **Features**
 
 - Get the current files inside the project
-- Different views to hide some files
 
 ## **UI**
 
 - File Tree with collapsable folders
+- Different views to hide some files
 
 ## **Help**
 
@@ -20,6 +20,8 @@ This module is responsible for showing the current hierarchy of files and direct
 ## **Interactions**
 
 ### Incomming
+
+- Events of file watcher from file module in case of external IDE changes
 
 ### Outgoing
 
