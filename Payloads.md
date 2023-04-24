@@ -5,7 +5,6 @@ This page aim's to list all the payload categories needed to make this architect
 ### UI Events from the UI Module:
 Generic data:
     - id
-    - name
 
 Button events:
     - action (pressed, released, hovered, unhovered)
