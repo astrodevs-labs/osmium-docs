@@ -10,6 +10,8 @@ Should save a file with given content
 Should watch changes on a set of files/folders
 Should rename a file/folder
 Should delete a file/folder
+Should move a file/folder
+Should provide a typing for files (based on their extensions ?)
 
 ## **UI**
 
