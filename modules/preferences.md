@@ -9,6 +9,7 @@ Keymap settings
 Editor settings (completion, indentation, comment display...)
 Plugins settings
 Miscelanious settings
+Any other preferences that could be added by other modules (giving them choice of categorization or applying a new menu automatically based on the module name ?)
 
 ## **UI**
 A window with a sidebar for each of the features categories
