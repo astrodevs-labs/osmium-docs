@@ -31,7 +31,8 @@ Listen for file content edition (from UI module)
 Listen for file content change (from file watcher)
 Listen for file view/interactions specifications from other modules
 ### Outgoing
-Notify frontend in case of file content change 
+Notify frontend in case of file content/view(for each non-editing feature described above) change 
+Notify Tabs module when there is a new file tab to show (by go to or simple file opening)
 
 ## **Events**
 
