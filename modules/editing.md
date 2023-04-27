@@ -29,7 +29,7 @@ Code-wrapping settings ? (default behavior or specific with project types/langua
 ### Incomming
 Listen for file content edition (from UI module)
 Listen for file content change (from file watcher)
-
+Listen for file view/interactions specifications from other modules
 ### Outgoing
 Notify frontend in case of file content change 
 
