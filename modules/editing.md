@@ -20,7 +20,10 @@ Modify file content when keypad is is stroke
 Font size
 Max opened tabs
 Effect of double click (temporary/persitent tab ?)
-
+Show/Hide line numbers
+Show/Hide white spaces
+Line-wrapping settings
+Code-wrapping settings ? (default behavior or specific with project types/languages ?) 
 ## **Interactions**
 
 ### Incomming
