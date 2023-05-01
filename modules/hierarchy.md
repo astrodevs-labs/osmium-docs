@@ -26,7 +26,7 @@ This module is responsible for showing the current hierarchy of files and direct
 
 ### Outgoing
 
-- Send to the UI module the text to show depending on the current hierarchy
+- Send file/folder manipulation (beside file edition) events to the file module (to operate the corresponding filesystem changes)
 
 ## **Events**
 
