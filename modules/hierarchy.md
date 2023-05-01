@@ -7,7 +7,8 @@ This module is responsible for showing the current hierarchy of files and direct
 ## **Features**
 
 - Get the current files inside the project
-
+- Associate file types with corresponding icon
+- Typing folders depending on project type or even default settings
 ## **UI**
 
 - File Tree with collapsable folders
