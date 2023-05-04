@@ -1,0 +1,8 @@
+type: object
+properties:
+  id:
+    type: string
+    description: Unique ID of the component.
+  state:
+    type: string
+    description: The state event that occurred.

@@ -1,0 +1,21 @@
+type: object
+properties:
+  ip:
+    type: string
+    description: The address of the client (for collaboration purposes).
+  port:
+    type: integer
+    description: The port on which the client listens.
+  isOwner:
+    type: boolean
+    description: Wether or not the client is the owner of the session.
+  build:
+    type: string
+    enum:
+      - debug
+      - release
+      - experimental-release
+    description: The build type of the client.
+  version:
+      type: string
+      description: The version of the client.

@@ -80,16 +80,15 @@ components:
       summary: Async Request for a Entity
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: '#/components/schemas/Component'
+        $ref: 'payloads/component_state.yml'
   
-
     NewScaffoldPayload:
       name: New Layout payload
       title: Layout data
       summary: Async Request for a Entity
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: '#/components/schemas/Component'
+        $ref: 'payloads/component_state.yml'
   
     StateChangePayload:
       name: New Layout payload
@@ -97,54 +96,20 @@ components:
       summary: Async Request for a Entity
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: '#/components/schemas/Component'
+        $ref: 'payloads/component_state.yml'
   
     StateEventPayload:
-      name: New Layout payload
-      title: Layout data
-      summary: Async Request for a Entity
+      title: State Event Payload
+      summary: | 
+        Generic state payload from the client.
+        To be formatted as a specific payload to broadcast to modules.
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: '#/components/schemas/Component'
-  
+        $ref: 'payloads/component_state.yml'
 
     ConnectionPayload:
       title: Connection Payload
       summary: Payload with the connection information.
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: '#/components/schemas/Connection'
-  
-  schemas:
-    Component:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique ID of the component.
-        state:
-          type: string
-          description: The state event that occurred.
-
-    Connection:
-      type: object
-      properties:
-        ip:
-          type: string
-          description: The address of the client (for collaboration purposes).
-        port:
-          type: integer
-          description: The port on which the client listens.
-        isOwner:
-          type: boolean
-          description: Wether or not the client is the owner of the session.
-        build:
-          type: string
-          enum:
-            - debug
-            - release
-            - experimental-release
-          description: The build type of the client.
-        version:
-            type: string
-            description: The version of the client.
+        $ref: 'payloads/connection_info.yml'
