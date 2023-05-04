@@ -1,0 +1,123 @@
+asyncapi: '2.6.0'
+info:
+  title: UI Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: ui.prod
+    protocol: cpp
+    description: server description
+  dev:
+    url: ui.dev
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  # Has it to be different than a component state event ? 
+  ComponentTreeUpdate:
+    description: Events about modifying current component tree.
+    subscribe:
+      summary: Component Added or Deleted
+      operationId: treeUpdate
+      message:
+        $ref: '#/components/messages/NewLayoutPayload'
+
+  NewScaffoldEvent:
+    description: Events about resetting the component tree.
+    publish:
+      summary: Sending new scaffold
+      operationId: newScaffold
+      message:
+        $ref: '#/components/messages/NewScaffoldPayload'
+
+
+  ComponentStateUpdate:
+    description: Events state changes in a component.
+    subscribe:
+      summary: Another module changed the state of a component
+      operationId: stateUpdate
+      message:
+        $ref: '#/components/messages/StateChangePayload'
+
+  FrontStateEvent:
+    description: Events from the front end user (See front-module).
+    subscribe:
+      summary: A state changed from the client input.
+      operationId: stateEvent
+      message:
+        $ref: '#/components/messages/StateEventPayload'
+  
+  FrontConnectedEvent:
+    description: Events on connection with front-end (See front-module).
+    subscribe:
+      summary: A payload containing the connection information (here used to trigger first scaffold building)
+      operationId: frontConnectedEvent
+      message:
+        $ref: '#/components/messages/ConnectionPayload'
+
+  FrontTreeUpdate:
+    description: Events to send to front when tree changed (See front-module).
+    publish:
+      summary: Sending Event to Front
+      operationId: treeUpdateEvent
+      message:
+        $ref: '#/components/messages/NewLayoutPayload'
+
+
+components:
+  messages:
+    NewLayoutPayload:
+      name: New Layout payload
+      title: Layout data
+      summary: Async Request for a Entity
+      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+      payload:
+        $ref: '#/components/schemas/Component'
+  
+
+    NewScaffoldPayload:
+      name: New Layout payload
+      title: Layout data
+      summary: Async Request for a Entity
+      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+      payload:
+        $ref: '#/components/schemas/Component'
+  
+    StateChangePayload:
+      name: New Layout payload
+      title: Layout data
+      summary: Async Request for a Entity
+      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+      payload:
+        $ref: '#/components/schemas/Component'
+  
+    StateEventPayload:
+      name: New Layout payload
+      title: Layout data
+      summary: Async Request for a Entity
+      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+      payload:
+        $ref: '#/components/schemas/Component'
+  
+
+    ConnectionPayload:
+      name: New Layout payload
+      title: Layout data
+      summary: Async Request for a Entity
+      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+      payload:
+        $ref: '#/components/schemas/Component'
+  
+  schemas:
+    Component:
+      type: object
+      child: 
+        $ref: '#/components/schemas/Component'
