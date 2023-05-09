@@ -1,20 +1,32 @@
 name: Task Issue
-description: Describes a small task that will be linked to a corresponding milestone/epic issue.
-title: "Task(Linked Epic Issue): <task/feature>"
-labels: [task]
+description: Describes a small task (MAKE SURE TO LINK to a corresponding 'User story','Technical story' or parent 'task' issue).
+title: "<title>"
+labels: [Task]
 body:
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Describe the task, what should be done ?.
+      description: Describe the task, what should be done? / Keep it brief and simple.
     validations:
       required: true
+  - type: textarea
+    id: DoD
+    attributes:
+      label: Definition of done
+      description: Is this task a heavy task with sub tasks? Describe the tasks here.
+      value: |
+        - [ ] 1. 
+        - [ ] 2. 
+        - [ ] 3.
+    validations:
+      required: false
+    
   - type: textarea
     id: qa
     attributes:
       label: QA
-      description: Describe if the task can than be tested and how it will be tested.
+      description: Describe how this task will be tested.
   - type: checkboxes
     id: terms
     attributes:

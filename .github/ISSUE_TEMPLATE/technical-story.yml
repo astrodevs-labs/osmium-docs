@@ -1,30 +1,14 @@
-name: User Story
-description: Describes a user story.
+name: Technical Story
+description: Describes a technical story.
 title: "<title>"
-labels: [User story]
+labels: [Technical story]
 body:
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Describe the user flow. / Keep it brief and simple.
-      placeholder: What is the user supposed te be able to do? Why is this story revelant?
-    validations:
-      required: true
-  - type: input
-    id: who
-    attributes:
-      label: As
-      description: Which kind of people will be concerned by this story?
-      placeholder: ex. Smart Contract Developer
-    validations:
-      required: true
-  - type: input
-    id: what
-    attributes:
-      label: I want to
-      description: As the target of this user story, what would I be able to do.
-      placeholder: ex. make something with outcome
+      description: Describe the technical chore to achieve. / Keep it brief and simple.
+      placeholder: What is the benefits for the developers? Why is this story revelant?
     validations:
       required: true
   - type: textarea
