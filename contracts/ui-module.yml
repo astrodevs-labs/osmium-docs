@@ -76,25 +76,22 @@ components:
   messages:
 
     ComponentUpdatePayload:
-      name: New Layout payload
-      title: Layout data
-      summary: Async Request for a Entity
+      title: Component Payload
+      summary: The components data received from other modules by the UI Module
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
         $ref: 'payloads/component_update.yml'
 
     NewLayoutPayload:
-      name: New Layout payload
-      title: Layout data
-      summary: Async Request for a Entity
+      title: Front Component Payload
+      summary: The optimized components data to send to the front
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
         $ref: 'payloads/component_update.yml'
   
     NewScaffoldPayload:
-      name: New Layout payload
-      title: Layout data
-      summary: Async Request for a Entity
+      title: Scaffold Data Payload
+      summary: A Scaffold structure data to build UI
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
         $ref: 'payloads/new_scaffold_req.yml'
@@ -102,7 +99,7 @@ components:
     StateEventPayload:
       title: State Event Payload
       summary: | 
-        Generic state payload from the client.
+        Generic component state event payload from the client.
         To be formatted as a specific payload to broadcast to modules.
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
