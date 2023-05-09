@@ -1,0 +1,21 @@
+type: object
+properties:
+  action:
+    type: string
+    enum:
+      - added
+      - deleted
+      - updated
+  type:
+    type: string
+    description: The type of the component
+  uid:
+    type: string
+    description: Unique ID of the component.
+  props:
+    type: array
+    description: Properties of the component
+  parent-uid:
+    type: string
+    description: The unique id of the parent in which the component is placed
+
