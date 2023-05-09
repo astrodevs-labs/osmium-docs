@@ -80,7 +80,7 @@ components:
       summary: Async Request for a Entity
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: 'payloads/component_state.yml'
+        $ref: 'payloads/tree_update.yml'
   
     NewScaffoldPayload:
       name: New Layout payload
@@ -88,7 +88,7 @@ components:
       summary: Async Request for a Entity
       schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
       payload:
-        $ref: 'payloads/component_state.yml'
+        $ref: 'payloads/new_scaffold_req.yml'
   
     StateChangePayload:
       name: New Layout payload
