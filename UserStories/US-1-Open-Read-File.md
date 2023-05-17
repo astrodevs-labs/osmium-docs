@@ -134,13 +134,11 @@
 - [ ] Add file content to ReadFileEvent payload - FileModule
 - [ ] Emit ComponentTreeUpdate with file content of ReadFileEvent - EditingModule
 
-### Front End
-- [ ] Create 'file-tab' component and factory builder
-
 
 
 ## The user should be able to see the file content in a file tab
 ### Front End
+- [ ] Create 'file-tab' component and factory builder
 - [ ] Make a hook to decode the file content received in the 'file-tab' component
 Need further investigations.
 
