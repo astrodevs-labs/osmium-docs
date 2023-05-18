@@ -16,7 +16,10 @@
 ## The frontend initiate websocket connection to the backend and perform handshake
 - [ ] Initialize frontend protocol client with the backend address/port
 - [ ] send initial handshake message to the backend
-- [ ] register new client as frontend in the backend
+- [ ] Create empty FrontComModule
+- [ ] register new client as frontend in FrontComModule
+- [ ] Create payload ConnectionPayload
+- [ ] Emmit async ConnectionPayload on new client connected - FrontComModule
     
 
 ## The frontend requests the layout to display through a graphql query created by the protocol client
@@ -25,22 +28,26 @@
 
 
 ## The frontend-communication module handles the layout request and emit a layoutPayload event
-- [ ] Create a layoutPayload event
-- [ ] Emit the layoutPayload event when the layout request is received
+- [ ] Create a LayoutRequestPayload
+- [ ] Create a CreateLayoutPayload
+- [ ] Create the empty UIModule
+- [ ] Emit the sync LayoutRequestPayload on layout request - FrontComModule
+- [ ] Register empty handler for LayoutRequestPayload - UIModule
+- [ ] Emit the sync CreateLayoutPayload - UIModule
 
 
 ## The backend responds with first visual layout
-- [ ] Create the empty UIModule
 - [ ] Create the empty LayoutModule
 - [ ] Create the ComponentPayload 
+- [ ] Create the NewLayoutPayload
 - [ ] Add static method to create 'left-side-bar' ComponentPayload
 - [ ] Add static method to create 'center-canvas' ComponentPayload
-- [ ] Create the NewLayoutPayload
-- [ ] Register empty handler for NewLayoutPayload - LayoutModule
-- [ ] Add 'left side bar' and 'center-canvas' to NewLayoutPayload - LayoutModule
-- [ ] Register empty handler for NewLayoutPayload - UIModule
+- [ ] Register empty handler for CreateLayoutPayload - LayoutModule
+- [ ] Add 'left side bar' and 'center-canvas' to CreateLayoutPayload - LayoutModule
+- [ ] Emmit sync NewLayoutPayload on return of CreateLayoutPayload - UIModule
 - [ ] Add the new components in the tree - UIModule
-- [ ] Use the data of NewLayoutPayload to generate GraphQL response - FrontComModule
+- [ ] Fill the LayoutRequestPayload with the fetched data - UIModule
+- [ ] Use the data of LayoutRequestPayload to generate GraphQL response - FrontComModule
 
 
 ## The user can see a visual layout in the window
@@ -86,24 +93,33 @@
 ## The back end generates the tree view of files
 ### Back end
 - [ ] Create the empty FileModule
+- [ ] Create the empty ProjectModule
+- [ ] Create the OpenProjectPayload
+- [ ] Create the ProjectFilesPayload
 - [ ] Add static method to create 'simple-icon' ComponentPayload
 - [ ] Add static method to create 'label' ComponentPayload
 - [ ] Add static method to create 'card' ComponentPayload
-- [ ] Add method to retrieve file/directory tree from input directory
-- [ ] Emit a async ProjectFilesPayload when NewLayoutPayload received with 'editor' root component - FileModule
-- [ ] Register empty handler on ProjectFilesPayload - HierarchyModule
+- [ ] Add method to retrieve file/directory tree from input directory - FileModule
+- [ ] Emit async OpenProjectPayload on ConnectionPayload - ProjectModule # To be changed later
+- [ ] Register empty handler on OpenProjectPayload - HierarchyModule
+- [ ] Emit sync ProjectFilesPayload on OpenProjectPayload - HierarchyModule
+- [ ] Register empty handler on ProjectFilesPayload - FileModule
 - [ ] Add method to create a 'directory-card' ComponentPayload
 - [ ] Add method to create a 'file-card' ComponentPayload
+- [ ] Create hierarchy tree with project files - HierarchyModule
 - [ ] Emit a async ComponentTreeUpdate to update the hierarchy - HierarchyModule
 
 
 ## The user can navigate in his directory with the hierarchy view port
-(related component ui modules) + UI Module + FrontCom module == ComponentTreePayload && front component update handling
+(related component ui modules) + UI Module + FrontCom module == ComponentTreeUpdate && front component update handling
 ### Back End
-- [ ] Register empty handler on ComponentTreePayload - UIModule
+- [ ] Create the FrontComponentTreeUpdate payload
+- [ ] Register empty handler on ComponentTreeUpdate - UIModule
 - [ ] Update internal component tree - UIModule
-- [ ] Create GraphQL event on ComponentTreePayload - FrontComModule
-- [ ] Send GraphQL ComponentTreeUpdate event to front - FrontComModule
+- [ ] Emit FrontComponentTreeUpdate payload - UIModule
+- [ ] Register empty handler on FrontComponentTreeUpdate - FrontComModule
+- [ ] Create GraphQL event on FrontComponentTreeUpdate - FrontComModule
+- [ ] Send GraphQL FrontComponentTreeUpdate event to front - FrontComModule
 
 ### Front End
 - [ ] Create 'icon' component and factory builder
@@ -140,6 +156,5 @@
 ### Front End
 - [ ] Create 'file-tab' component and factory builder
 - [ ] Make a hook to decode the file content received in the 'file-tab' component
-Need further investigations.
 
  
