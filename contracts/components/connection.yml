@@ -1,0 +1,5 @@
+title: Connection Payload
+summary: Payload with the connection information.
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/connection_info.yml'

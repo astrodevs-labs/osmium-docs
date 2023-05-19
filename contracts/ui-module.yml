@@ -28,7 +28,7 @@ channels:
       summary: Component Added or Deleted
       operationId: treeUpdate
       message:
-        $ref: '#/components/messages/ComponentUpdatePayload'
+        $ref: 'components/component-update.yml'
 
   NewScaffoldEvent:
     description: Events about resetting the component tree.
@@ -36,7 +36,7 @@ channels:
       summary: Sending new scaffold
       operationId: newScaffold
       message:
-        $ref: '#/components/messages/NewScaffoldPayload'
+        $ref: 'components/new-scaffold.yml'
 
   FrontStateEvent:
     description: Events from the front end user (See front-module).
@@ -44,7 +44,7 @@ channels:
       summary: A state changed from the client input.
       operationId: stateEvent
       message:
-        $ref: '#/components/messages/StateEventPayload'
+        $ref: 'components/state-event.yml'
   
   FrontConnectedEvent:
     description: Events on connection with front-end (See front-module).
@@ -52,7 +52,7 @@ channels:
       summary: A payload containing the connection information (here used to trigger first scaffold building)
       operationId: frontConnectedEvent
       message:
-        $ref: '#/components/messages/ConnectionPayload'
+        $ref: 'components/connection.yml'
 
   FrontTreeUpdate:
     description: Events to send to front when tree changed (See front-module).
@@ -60,7 +60,7 @@ channels:
       summary: Sending Event to Front
       operationId: treeUpdateEvent
       message:
-        $ref: '#/components/messages/NewLayoutPayload'
+        $ref: 'components/new-layout.yml'
   
   FrontScaffoldUpdate:
     description: Events to send to front when a new scaffold has to be rendered (See front-module).
@@ -68,46 +68,4 @@ channels:
       summary: Sending scaffold to Front
       operationId: scaffoldEvent
       message:
-        $ref: '#/components/messages/NewScaffoldPayload'
-
-
-
-components:
-  messages:
-
-    ComponentUpdatePayload:
-      title: Component Payload
-      summary: The components data received from other modules by the UI Module
-      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
-      payload:
-        $ref: 'payloads/component_update.yml'
-
-    NewLayoutPayload:
-      title: Front Component Payload
-      summary: The optimized components data to send to the front
-      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
-      payload:
-        $ref: 'payloads/component_update.yml'
-  
-    NewScaffoldPayload:
-      title: Scaffold Data Payload
-      summary: A Scaffold structure data to build UI
-      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
-      payload:
-        $ref: 'payloads/new_scaffold_req.yml'
-  
-    StateEventPayload:
-      title: State Event Payload
-      summary: | 
-        Generic component state event payload from the client.
-        To be formatted as a specific payload to broadcast to modules.
-      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
-      payload:
-        $ref: 'payloads/component_state.yml'
-
-    ConnectionPayload:
-      title: Connection Payload
-      summary: Payload with the connection information.
-      schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
-      payload:
-        $ref: 'payloads/connection_info.yml'
+        $ref: 'components/new-scaffold.yml'

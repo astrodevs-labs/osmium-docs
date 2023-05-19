@@ -1,0 +1,7 @@
+title: State Event Payload
+summary: | 
+  Generic component state event payload from the client.
+  To be formatted as a specific payload to broadcast to modules.
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/component_state.yml'

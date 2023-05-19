@@ -1,0 +1,5 @@
+title: Component Payload
+summary: The components data received from other modules by the UI Module
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/component_update.yml'

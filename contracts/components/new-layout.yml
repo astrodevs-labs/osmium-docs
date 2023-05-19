@@ -1,0 +1,5 @@
+title: Front Component Payload
+summary: The optimized components data to send to the front
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/component_update.yml'
