@@ -1,0 +1,54 @@
+asyncapi: '2.6.0'
+info:
+  title: Front-end Communication Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: ui.prod
+    protocol: cpp
+    description: server description
+  dev:
+    url: ui.dev
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  FrontTreeUpdate:
+    description: Events to send to front when tree changed (See front-module).
+    subscribe:
+      summary: Sending Event to Front
+      operationId: treeUpdateEvent
+      message:
+        $ref: 'components/new-layout.yml'
+
+  FrontScaffoldUpdate:
+    description: Events to send to front when a new scaffold has to be rendered (See front-module).
+    subscribe:
+      summary: Sending scaffold to Front
+      operationId: scaffoldEvent
+      message:
+        $ref: 'components/new-scaffold.yml'
+
+  FrontStateEvent:
+    description: Events from the front end user (See front-module).
+    publish:
+      summary: A state changed from the client input.
+      operationId: stateEvent
+      message:
+        $ref: 'components/state-event.yml'
+
+  FrontConnectedEvent:
+    description: Events on connection with front-end (See front-module).
+    publish:
+      summary: A payload containing the connection information (here used to trigger first scaffold building)
+      operationId: frontConnectedEvent
+      message:
+        $ref: 'components/connection.yml'
