@@ -1,0 +1,5 @@
+title: Layout Request Payload
+summary: Payload with the initial layout information.
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/layout-request.yml'

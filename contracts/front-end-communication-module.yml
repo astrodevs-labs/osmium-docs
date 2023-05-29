@@ -21,6 +21,15 @@ servers:
 defaultContentType: application/json
 
 channels:
+  LayoutRequest:
+    description: Events to send to front with initial layout tree
+    publish:
+      summary: A payload containing the initial layout
+      operationId: layoutRequestEvent
+      message:
+        $ref: 'components/layout-request.yml'
+
+
   FrontTreeUpdate:
     description: Events to send to front when tree changed (See front-module).
     subscribe:
