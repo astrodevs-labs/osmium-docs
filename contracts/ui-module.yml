@@ -69,3 +69,11 @@ channels:
       operationId: scaffoldEvent
       message:
         $ref: 'components/new-scaffold.yml'
+  
+  LayoutRequest:
+    description: Events to send to front with initial layout tree
+    subscribe:
+      summary: A payload containing the initial layout
+      operationId: layoutRequestEvent
+      message:
+        $ref: 'components/layout-request.yml'
