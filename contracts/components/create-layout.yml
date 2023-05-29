@@ -1,0 +1,5 @@
+title: Create Layout Payload
+summary: Payload with the processed layout of components.
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/create-layout.yml'

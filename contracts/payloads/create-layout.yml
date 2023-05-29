@@ -1,0 +1,5 @@
+type: object
+properties:
+  layout:
+    type: array
+    description: The layout array of components

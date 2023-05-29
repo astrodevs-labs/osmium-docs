@@ -1,0 +1,30 @@
+asyncapi: '2.6.0'
+info:
+  title: Layout Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: ui.prod
+    protocol: cpp
+    description: server description
+  dev:
+    url: ui.dev
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  CreateLayout:
+    description: Events to send to layout module with processed layout
+    subscribe:
+      summary: A payload containing the detailed initial layout to create
+      operationId: createLayoutEvent
+      message:
+        $ref: 'components/create-layout.yml'

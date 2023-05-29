@@ -77,3 +77,11 @@ channels:
       operationId: layoutRequestEvent
       message:
         $ref: 'components/layout-request.yml'
+  
+  CreateLayout:
+    description: Events to send to layout module with processed layout
+    publish:
+      summary: A payload containing the detailed initial layout to create
+      operationId: createLayoutEvent
+      message:
+        $ref: 'components/create-layout.yml'
