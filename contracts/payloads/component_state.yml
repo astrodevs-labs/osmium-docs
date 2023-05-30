@@ -8,4 +8,4 @@ properties:
     description: The state event that occurred.
   data:
     type: array
-    description: Optionnal event data (e.g key inputs).
+    description: Optional event data (e.g key inputs).

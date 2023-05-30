@@ -1,0 +1,11 @@
+type: object
+properties:
+  fullFilename:
+    type: string
+    description: The full filename with extension.
+  filename:
+    type: string
+    description: The filename without extension.
+  filepath: 
+    type: string
+    description: The full filepath of the file.

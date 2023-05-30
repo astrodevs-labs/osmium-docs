@@ -1,0 +1,20 @@
+type: object
+properties:
+  action:
+    type: string
+    enum:
+      - added
+      - deleted
+      - updated
+  type:
+    type: string
+    description: The type of the component
+  uid:
+    type: string
+    description: Unique ID of the component.
+  props:
+    type: array
+    description: Properties of the component
+  children:
+    type: array<component_data.yml>
+    description: Children of the component
