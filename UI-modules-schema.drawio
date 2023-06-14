@@ -1,0 +1,78 @@
+<mxfile host="Electron" modified="2023-06-14T12:39:22.054Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="Q97X8HSaZ5-8XJXKgzgw" version="21.2.8" type="device">
+  <diagram name="Page-1" id="_blu3K_pk_oQt2d3eO_R">
+    <mxGraphModel dx="2899" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mPc0d6a2rVssbyjoDbty-1" value="Backend" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;whiteSpace=wrap;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry y="200" width="580" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-2" value="FrontCommunicationModule" style="html=1;whiteSpace=wrap;fontSize=16;" vertex="1" parent="mPc0d6a2rVssbyjoDbty-1">
+          <mxGeometry width="240" height="60" relative="1" as="geometry">
+            <mxPoint x="-20" y="250" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-7" value="UI module" style="html=1;whiteSpace=wrap;fontSize=16;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="mPc0d6a2rVssbyjoDbty-1">
+          <mxGeometry width="110" height="60" relative="1" as="geometry">
+            <mxPoint x="460" y="250" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-11" value="Layout Module" style="html=1;whiteSpace=wrap;fontSize=16;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="mPc0d6a2rVssbyjoDbty-1">
+          <mxGeometry width="110" height="60" relative="1" as="geometry">
+            <mxPoint x="260" y="450" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-14" value="Modules" style="html=1;whiteSpace=wrap;fontSize=16;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;dashed=1;" vertex="1" parent="mPc0d6a2rVssbyjoDbty-1">
+          <mxGeometry width="110" height="60" relative="1" as="geometry">
+            <mxPoint x="260" y="100" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;startArrow=classic;startFill=1;" edge="1" parent="1" source="mPc0d6a2rVssbyjoDbty-7" target="mPc0d6a2rVssbyjoDbty-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-16" value="#4 ask for component to add in the tree" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="mPc0d6a2rVssbyjoDbty-15">
+          <mxGeometry x="-0.739" y="2" relative="1" as="geometry">
+            <mxPoint x="-83" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;startArrow=classic;startFill=1;" edge="1" parent="1" source="mPc0d6a2rVssbyjoDbty-7" target="mPc0d6a2rVssbyjoDbty-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-13" value="#3 ask component tree root (and nested base layout)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="mPc0d6a2rVssbyjoDbty-12">
+          <mxGeometry x="-0.5716" y="4" relative="1" as="geometry">
+            <mxPoint x="-139" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;startArrow=classic;startFill=1;" edge="1" parent="1" source="mPc0d6a2rVssbyjoDbty-2" target="mPc0d6a2rVssbyjoDbty-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-10" value="#2 Ask for component tree" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="mPc0d6a2rVssbyjoDbty-9">
+          <mxGeometry x="-0.4973" y="3" relative="1" as="geometry">
+            <mxPoint x="60" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="mPc0d6a2rVssbyjoDbty-3" target="mPc0d6a2rVssbyjoDbty-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-6" value="#1 Frontend request layout" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="mPc0d6a2rVssbyjoDbty-5">
+          <mxGeometry x="-0.4543" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-3" value="Frontend" style="html=1;whiteSpace=wrap;fontSize=16;dashed=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry width="110" height="60" relative="1" as="geometry">
+            <mxPoint x="-570" y="450" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="mPc0d6a2rVssbyjoDbty-2" target="mPc0d6a2rVssbyjoDbty-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mPc0d6a2rVssbyjoDbty-18" value="#5 Frontend layout response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="mPc0d6a2rVssbyjoDbty-17">
+          <mxGeometry x="-0.0625" y="-1" relative="1" as="geometry">
+            <mxPoint x="66" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

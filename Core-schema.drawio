@@ -1,0 +1,98 @@
+<mxfile host="Electron" modified="2023-06-14T08:55:57.949Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="qBaLUHrYmb8lJVmhI_nj" version="21.2.8" type="device">
+  <diagram name="Page-1" id="DAcCVkVSCarlToQI3W5U">
+    <mxGraphModel dx="3612" dy="2487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-1" target="VCBpYkGPp8_udlW-rfxa-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-16" value="#4. load symbol getModuleName and call it" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-15">
+          <mxGeometry x="-0.2437" y="-2" relative="1" as="geometry">
+            <mxPoint x="88" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-1" target="VCBpYkGPp8_udlW-rfxa-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-19" value="#5 create MessagingInterface with module name" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-17">
+          <mxGeometry x="-0.125" y="4" relative="1" as="geometry">
+            <mxPoint x="143" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-1" target="VCBpYkGPp8_udlW-rfxa-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1147" y="-490" />
+              <mxPoint x="-530" y="-490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-20" value="#6 load symbol createModule and call it with the created messaging interface" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-18">
+          <mxGeometry x="-0.3197" y="-2" relative="1" as="geometry">
+            <mxPoint x="200" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-1" value="Core" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-1200" y="-750" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-2" target="VCBpYkGPp8_udlW-rfxa-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-14" value="#(3.2). Throw exception if error" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-13">
+          <mxGeometry x="0.24" y="1" relative="1" as="geometry">
+            <mxPoint x="87" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-2" value="DynamicLoader" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-960" y="-610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-3" value="DynamicLoaderExceptions" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-870" y="-750" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-4" value="MesagingInterface" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-785" y="-470" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-5" value="Modules" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-620" y="-610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-6" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Module loading&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-985" y="-880" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-7" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="VCBpYkGPp8_udlW-rfxa-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1095" y="-830" as="sourcePoint" />
+            <mxPoint x="-875" y="-520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-8" value="#1. call loadModule()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-7">
+          <mxGeometry x="-0.4889" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-1" target="VCBpYkGPp8_udlW-rfxa-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-910" y="-500" as="sourcePoint" />
+            <mxPoint x="-860" y="-550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-10" value="#2. call loadLibrary()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-9">
+          <mxGeometry x="-0.6" y="-2" relative="1" as="geometry">
+            <mxPoint x="72" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-11" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VCBpYkGPp8_udlW-rfxa-2" target="VCBpYkGPp8_udlW-rfxa-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-910" y="-500" as="sourcePoint" />
+            <mxPoint x="-860" y="-550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VCBpYkGPp8_udlW-rfxa-12" value="#3.1. load shared library" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="VCBpYkGPp8_udlW-rfxa-11">
+          <mxGeometry x="-0.52" relative="1" as="geometry">
+            <mxPoint x="52" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
