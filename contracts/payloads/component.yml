@@ -1,0 +1,18 @@
+type: object
+properties:
+  type:
+    type: string
+    description: The type of the component
+  id:
+    type: string
+    description: Unique ID of the component.
+  props:
+    type: array
+    description: Properties of the component
+    items:
+      $ref: ./property.yml
+  children:
+    type: array
+    description: Children of the component
+    items:
+      $ref: ./component.yml

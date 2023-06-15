@@ -1,0 +1,42 @@
+asyncapi: '2.6.0'
+info:
+  title: Hierarchy Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: core
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  NewLayoutRequest:
+    description: Payload that allows the module to add components in the tree for the frontend
+    subscribe:
+      summary: A payload containing the components to add in the tree
+      operationId: newLayoutRequest
+      message:
+        $ref: 'components/new-layout.yml'
+    
+  ComponentStateEvent:
+    description: Events from the front end user.
+    subscribe:
+      summary: A state changed from the user input.
+      operationId: stateEvent
+      message:
+        $ref: 'components/component-state.yml'
+
+  OpenFileEvent:
+    description: Emitted when a file entry is clicked
+    publish:
+      summary: The file to open
+      operationId: stateEvent
+      message:
+        $ref: 'components/open-file.yml'

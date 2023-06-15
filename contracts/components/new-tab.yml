@@ -1,0 +1,5 @@
+title: Create New Tab
+summary: The component for the new tab creation
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/component.yml'

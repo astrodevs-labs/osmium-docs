@@ -1,0 +1,5 @@
+title: Component Interacted
+summary: The component interaction sent by the frontend
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/component_state.yml'

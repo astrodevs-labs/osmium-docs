@@ -1,0 +1,26 @@
+asyncapi: '2.6.0'
+info:
+  title: File Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: core
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  ReadFileRequest:
+    description: Request to send to retrieve a file content
+    publish:
+      summary: A payload containing the file content
+      operationId: readFileRequest
+      message:
+        $ref: 'components/read_file_req.yml'

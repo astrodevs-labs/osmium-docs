@@ -1,0 +1,35 @@
+asyncapi: '2.6.0'
+info:
+  title: Editing Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: core
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:
+  OpenFileEvent:
+    description: Emitted when a file entry is clicked
+    publish:
+      summary: The file to open
+      operationId: stateEvent
+      message:
+        $ref: 'components/open-file-event.yml'
+
+  
+  NewTabEvent:
+    description: Emitted when a new tab needs to be created
+    publish:
+      summary: The new tab
+      operationId: newTabEvent
+      message:
+        $ref: 'components/new-tab.yml'

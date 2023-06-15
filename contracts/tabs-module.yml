@@ -1,0 +1,26 @@
+asyncapi: '2.6.0'
+info:
+  title: Tabs Module
+  version: '1.0.0'
+  description: |
+    Description ahah
+  contact:
+    name: Contact Name
+    email: email@company.com
+
+servers:
+  production:
+    url: core
+    protocol: cpp
+    description: server description
+
+defaultContentType: application/json
+
+channels:  
+  NewTabEvent:
+    description: Emitted when a new tab needs to be created
+    subscribe:
+      summary: The new tab
+      operationId: newTabEvent
+      message:
+        $ref: 'components/new-tab.yml'

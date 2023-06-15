@@ -1,0 +1,5 @@
+title: Open file editing
+summary: Open the file in the editor
+schemaFormat: application/vnd.aai.asyncapi;version=2.6.0
+payload:
+  $ref: '../payloads/open_file_event.yml'
